@@ -66,14 +66,14 @@ npm run build-storybook
 ├── src
 │   ├── button                  → folder with component name
 |   │   ├── button.tsx          → component jsx file
-|   |   └── index.tsx           → component export index
+|   |   └── index.ts            → component export index
 |   │
 |   ├── assets
 |   |   ├── scss
 |   |   |   └── _button.scss    → component styling file (optional)
 |   |   └── design.system.scss  → import component scss in this file
 |   |
-│   └── index.tsx               → import component jsx in this file
+│   └── index.ts                → import component jsx in this file
 │
 └── stories
     └── button.stories.tsx      → component documentation in storybook
