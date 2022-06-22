@@ -1,6 +1,10 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
+  stories: [
+    '../stories/welcome.stories.tsx',
+    '../stories/**/*.stories.@(ts|tsx|js|jsx)',
+  ],
   addons: [
+    '@storybook/addon-controls',
     '@storybook/addon-essentials',
     '@storybook/preset-scss',
     '@storybook/addon-a11y',

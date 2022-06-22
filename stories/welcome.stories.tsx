@@ -1,26 +1,17 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Welcome, WelcomeProps } from '../src';
+import { Welcome as WelcomeReact } from './welcome';
 
 const meta: Meta = {
-  title: 'Designs',
-  component: Welcome,
-  argTypes: {
-    children: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  title: 'Welcome',
+  component: WelcomeReact,
   parameters: {
-    controls: { expanded: true },
+    options: {
+      showPanel: false,
+    },
   },
 };
 
 export default meta;
 
-const Template: Story<WelcomeProps> = (args) => <Welcome {...args} />;
-
-export const Saleshandy = Template.bind({});
-
-Saleshandy.args = {};
+export const Welcome: Story = () => <WelcomeReact />;
