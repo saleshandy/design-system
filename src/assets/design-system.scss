@@ -3,3 +3,7 @@
 
 // Welcome Component Styles
 @import './scss/welcome';
+
+* {
+  font-family: $font-family-sans-serif;
+}
