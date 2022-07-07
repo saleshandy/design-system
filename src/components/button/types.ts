@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from 'react';
-import { Sizes } from './base';
+import { Sizes } from '../../shared/types/base';
 
 export type ButtonSizes = Sizes;
 export type ButtonTypes = 'button' | 'reset' | 'submit';
@@ -65,12 +65,12 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   /**
    * custom icon display on left side of children
    */
-  iconLeft?: ReactNode;
+  leftIconIdentifier?: string;
 
   /**
    * custom icon display on right side of children
    */
-  iconRight?: ReactNode;
+  rightIconIdentifier?: string;
 
   /**
    * custom className to the button
