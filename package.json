@@ -3,7 +3,7 @@
   "author": "Ikigai - Saleshandy",
   "description": "Saleshandy Design System",
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "ISC",
   "main": "dist/index.js",
   "module": "dist/saleshandy-design-system.esm.js",
   "typings": "dist/index.d.ts",
