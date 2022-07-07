@@ -1,8 +1,8 @@
 {
-  "name": "@saleshandy/design-system",
+  "name": "@saleshandy/designs",
   "author": "Ikigai - Saleshandy",
   "description": "Saleshandy Design System",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/saleshandy-design-system.esm.js",
@@ -78,5 +78,19 @@
     "tsdx": "^0.14.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
-  }
+  },
+  "homepage": "https://github.com/saleshandy/design-system.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saleshandy/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saleshandy/design-system.git/issues"
+  },
+  "keywords": [
+    "ikigai",
+    "saleshandy",
+    "saleshandy designs",
+    "saleshandy design system"
+  ]
 }
