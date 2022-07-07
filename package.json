@@ -1,7 +1,7 @@
 {
   "name": "@saleshandy/design-system",
   "description": "Saleshandy Design System",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "license": "ISC",
   "main": "dist/index.js",
   "module": "dist/saleshandy-design-system.esm.js",
