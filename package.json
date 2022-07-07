@@ -2,7 +2,7 @@
   "name": "@saleshandy/designs",
   "author": "Ikigai - Saleshandy",
   "description": "Saleshandy Design System",
-  "version": "2.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/saleshandy-design-system.esm.js",
