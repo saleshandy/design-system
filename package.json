@@ -1,6 +1,5 @@
 {
   "name": "@saleshandy/design-system",
-  "author": "Ikigai - Saleshandy",
   "description": "Saleshandy Design System",
   "version": "0.1.0",
   "license": "ISC",
@@ -80,6 +79,10 @@
     "typescript": "^4.0.3"
   },
   "homepage": "https://github.com/saleshandy/design-system.git",
+  "author": "Shoaib Sayyed <shoaib@saleshandy.com> (https://github.com/sh-shoaib",
+  "contributors": [
+    "Shoaib Sayyed <shoaib@saleshandy.com> (https://github.com/sh-shoaib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saleshandy/design-system.git"
