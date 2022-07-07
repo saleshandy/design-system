@@ -39,6 +39,12 @@ const meta: Meta = {
     className: {
       defaultValue: '',
     },
+    leftIconIdentifier: {
+      defaultValue: '',
+    },
+    rightIconIdentifier: {
+      defaultValue: '',
+    },
   },
   parameters: {
     controls: { expanded: true },

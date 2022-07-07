@@ -1,9 +1,13 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 
-import { ButtonProps } from '../types';
-import { ComponentClassNames } from '../shared/constants';
-import { classNameModifier, classNameModifierByFlag } from '../shared/utils';
+import { ButtonProps } from './types';
+import { ComponentClassNames } from '../../shared/utils/constants';
+import {
+  classNameModifier,
+  classNameModifierByFlag,
+} from '../../shared/utils/classname-modifiers';
+import { Icon } from '../icon';
 
 /**
  * This is a special button
@@ -19,8 +23,8 @@ export const Button: FC<ButtonProps> = ({
   isLoading,
   loadingText,
   children,
-  iconLeft,
-  iconRight,
+  leftIconIdentifier,
+  rightIconIdentifier,
   ...rest
 }) => {
   const componentClasses = classNames(
@@ -42,6 +46,14 @@ export const Button: FC<ButtonProps> = ({
     className
   );
 
+  console.log('🚀 > ComponentClassNames', ComponentClassNames);
+
+  const iconClasses = classNames(
+    ComponentClassNames.Icon,
+    classNameModifier(ComponentClassNames.Icon, leftIconIdentifier),
+    classNameModifier(ComponentClassNames.Icon, rightIconIdentifier)
+  );
+
   return (
     <button
       className={componentClasses}
@@ -50,13 +62,21 @@ export const Button: FC<ButtonProps> = ({
       {...rest}
     >
       {isLoading && loadingText ? (
-        // <Flex as="span" className={ComponentClassNames.ButtonLoaderWrapper}>
-        //   <Loader size={size} />
-        //   {loadingText}
-        // </Flex>
-        <span>Loading</span>
+        <span>Loading..</span>
       ) : (
-        children
+        <>
+          {leftIconIdentifier !== '' && (
+            <span className={iconClasses}>
+              <Icon identifier={leftIconIdentifier} />
+            </span>
+          )}
+          {children}
+          {rightIconIdentifier !== '' && (
+            <span className={iconClasses}>
+              <Icon identifier={rightIconIdentifier} />
+            </span>
+          )}
+        </>
       )}
     </button>
   );
@@ -72,6 +92,6 @@ Button.defaultProps = {
   isDisabled: false,
   isLoading: false,
   loadingText: '',
-  iconLeft: null,
-  iconRight: null,
+  leftIconIdentifier: '',
+  rightIconIdentifier: '',
 };
