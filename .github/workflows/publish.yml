@@ -1,8 +1,10 @@
 name: Publish
 
 on:
-  release:
-    types: [published]
+  workflow_run:
+    workflows: [Release]
+    types:
+      - completed
 
 jobs:
   publish:
@@ -20,12 +22,6 @@ jobs:
 
       - name: Install deps
         run: npm ci
-
-      - name: Check Eslint
-        run: npm run lint
-
-      - name: Check Prettier
-        run: npm run prettier:check
 
       - name: Run Test
         run: npm run test
