@@ -12,12 +12,8 @@ jobs:
 
     runs-on: 'ubuntu-latest'
 
-    permissions:
-      contents: write
-
     steps:
       - name: 'Create release'
-      - uses: actions/checkout@v2
-      - uses: ncipollo/release-action@v1
+        uses: 'ergebnis/.github/actions/github/release/create@1.7.0'
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
