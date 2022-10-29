@@ -3,17 +3,17 @@ name: Release
 on:
   workflow_run:
     workflows: [Bump Version]
-    types: [completed]
+    types:
+      - completed
 
 jobs:
-  on-success:
-    release:
-      name: 'Release'
+  release:
+    name: 'Release'
 
-      runs-on: 'ubuntu-latest'
+    runs-on: 'ubuntu-latest'
 
-      steps:
-        - name: 'Create release'
-          uses: 'ergebnis/.github/actions/github/release/create@1.7.0'
-          with:
-            github-token: '${{ secrets.ERGEBNIS_BOT_TOKEN }}'
+    steps:
+      - name: 'Create release'
+        uses: 'ergebnis/.github/actions/github/release/create@1.7.0'
+        with:
+          github-token: '${{ secrets.ERGEBNIS_BOT_TOKEN }}'
