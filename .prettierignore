@@ -1,0 +1,5 @@
+# Ignore Builds
+
+dist
+storybook-static
+node_modules
