@@ -1,0 +1,37 @@
+name: Run Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+      - release
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@saleshandy'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Check Eslint
+        run: npm run lint
+
+      - name: Check Prettier
+        run: npm run prettier:check
+
+      - name: Run Test
+        run: npm run test
+
+      - name: Create Build
+        run: npm run build
