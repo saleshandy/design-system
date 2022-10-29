@@ -17,7 +17,7 @@
     "build:types": "tsc -p tsconfig.build.json",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
-    "lint": "eslint src/**",
+    "lint": "eslint src/**/*.ts src/**/*.tsx",
     "start": "start-storybook -p 6006",
     "test": "jest",
     "copy-assets": "copyfiles -u 1 src/**/*.scss src/**/*.svg src/**/*.ttf src/**/*.eot src/**/*.woff  dist/",
