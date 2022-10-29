@@ -3,16 +3,17 @@ name: Release
 on:
   workflow_run:
     workflows: [Bump Version]
-    types:
-      - completed
+    types: [completed]
 
 jobs:
-  create:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ncipollo/release-action@v1
-        with:
-          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+  on-success:
+    release:
+      name: 'Release'
+
+      runs-on: 'ubuntu-latest'
+
+      steps:
+        - name: 'Create release'
+          uses: 'ergebnis/.github/actions/github/release/create@1.7.0'
+          with:
+            github-token: '${{ secrets.ERGEBNIS_BOT_TOKEN }}'
