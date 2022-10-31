@@ -24,6 +24,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         env:
-          ACCESS_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: storybook-static
           FOLDER: storybook-static
