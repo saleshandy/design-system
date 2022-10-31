@@ -2,6 +2,8 @@ name: Build and Deploy Storybook
 
 on:
   push:
+    branches:
+      - 'main'
     paths:
       - 'src/**'
 
@@ -16,10 +18,11 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Install and Build 🔧
-        run: |
-          npm ci
-          npm run build-storybook
+      - name: Install ⏬
+        run: npm install
+
+      - name: Build 🔧
+        run: npm run build-storybook
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
