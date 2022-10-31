@@ -8,7 +8,7 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps & { disabled: boolean }> = (args) => (
-  <Button {...args}>Default button</Button>
+  <Button {...args}>Default</Button>
 );
 
 export const Default = Template.bind({});

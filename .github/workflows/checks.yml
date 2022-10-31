@@ -18,8 +18,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '15.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@saleshandy'
 
       - name: Install deps
         run: npm ci
