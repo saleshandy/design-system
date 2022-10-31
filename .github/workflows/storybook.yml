@@ -2,6 +2,8 @@ name: Build and Deploy Storybook
 
 on:
   push:
+    branches:
+      - 'main'
     paths:
       - 'src/**'
 
