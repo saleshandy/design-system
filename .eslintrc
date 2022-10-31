@@ -8,8 +8,10 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
-    "prettier"
+    "prettier",
+    "plugin:jsx-a11y/recommended"
   ],
+  "plugins": ["jsx-a11y"],
   "settings": {
     "react": {
       "version": "detect"
