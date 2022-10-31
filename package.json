@@ -1,7 +1,7 @@
 {
   "name": "@saleshandy/design-system",
   "version": "0.1.2",
-  "description": "Saleshandy Component Library",
+  "description": "Saleshandy Design System",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -88,18 +88,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saleshandy/component-library.git"
+    "url": "git+https://github.com/saleshandy/design-system.git"
   },
   "author": "Saleshandy",
   "bugs": {
-    "url": "https://github.com/saleshandy/component-library/issues"
+    "url": "https://github.com/saleshandy/design-system/issues"
   },
-  "homepage": "https://github.com/saleshandy/component-library#readme",
+  "homepage": "https://github.com/saleshandy/design-system#readme",
   "keywords": [
     "ikigai",
     "saleshandy",
     "saleshandy designs",
-    "saleshandy design system",
-    "saleshandy component library"
+    "saleshandy design system"
   ]
 }
