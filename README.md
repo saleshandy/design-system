@@ -1,8 +1,8 @@
-# Saleshandy Component Library
+# Saleshandy Design System
 
 <br />
 
-A Component Library is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.
+A Design System is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.
 
 <br />
 
