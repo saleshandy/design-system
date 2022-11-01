@@ -1,4 +1,4 @@
-import { Modify } from '../../shared/utils/modify';
+import { Modify } from '../../utils/modify';
 
 type IconPropsShared = {
   identifier?: string;
