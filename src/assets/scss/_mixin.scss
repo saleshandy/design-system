@@ -1,0 +1,38 @@
+//* Font Size
+@mixin font-size-class() {
+  $font-size-list: 8 10 12 14 16 20 24;
+  @each $value in $font-size-list {
+    .font-#{$value} {
+      font-size: pxToRem($value);
+    }
+  }
+}
+
+//* Font Weight
+$font-weights: (
+  'lighter': $font-weight-lighter,
+  'light': $font-weight-light,
+  'normal': $font-weight-normal,
+  'medium': $font-weight-medium,
+  'semibold': $font-weight-semibold,
+  'bold': $font-weight-bold,
+  'bolder': $font-weight-bolder,
+);
+
+@mixin font-weight() {
+  @each $key, $value in $font-weights {
+    .font-#{$key} {
+      font-weight: $value;
+    }
+  }
+}
+
+//* Line Height
+@mixin line-height() {
+  $font-size-list: 8 10 12 14 16 20 24;
+  @each $value in $font-size-list {
+    .line-height-#{$value} {
+      line-height: pxToRem($value);
+    }
+  }
+}
