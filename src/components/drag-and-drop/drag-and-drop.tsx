@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { UploadIcon } from '../../svgs';
+import { UploadIcon, UploadIconWithBg } from '../../svgs';
 import { DragAndDropProps } from './types';
 import { ComponentClassNames } from '../../utils/constants';
 import { getClassNameByModifier } from '../../utils/classname-modifiers';
@@ -97,7 +97,8 @@ export const DragAndDrop = React.forwardRef<HTMLDivElement, DragAndDropProps>(
         {!isHidden && dragging && (
           <div className={componentOverlayClasses}>
             <div className={`${ComponentClassNames.DragAndDrop}--icon`}>
-              <UploadIcon />
+              {backgroundVariant === 'solid' && <UploadIcon />}
+              {backgroundVariant === 'blurred' && <UploadIconWithBg />}
             </div>
             <h2 className={`${ComponentClassNames.DragAndDrop}--title`}>
               {title}
