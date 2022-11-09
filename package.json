@@ -1,6 +1,6 @@
 {
   "name": "@saleshandy/design-system",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Saleshandy Design System",
   "license": "MIT",
   "main": "dist/index.cjs.js",
