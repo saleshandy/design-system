@@ -47,7 +47,7 @@ SkeletonLoading.defaultProps = {
   width: 50,
   height: 14,
   baseColor: '#F3F4F6',
-  highlightColor: '#f5f5f5',
+  highlightColor: 'rgba(213, 216, 221, .6)',
   circle: false,
   enableAnimation: true,
   count: 1,
