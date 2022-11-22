@@ -1,3 +1,4 @@
+import 'react-loading-skeleton/dist/skeleton.css';
 import './assets/scss/design-system.scss';
 
 export * from './components/button';
