@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+
 export interface SkeletonLoadingProps {
   width?: number;
   height?: number;
@@ -8,4 +10,5 @@ export interface SkeletonLoadingProps {
   enableAnimation?: boolean;
   count?: number;
   borderRadius?: number;
+  style?: CSSProperties;
 }

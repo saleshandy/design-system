@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
-import { DragAndDrop, DragAndDropProps } from '../';
+import { DragAndDrop, DragAndDropProps } from '../components/drag-and-drop';
 
 export default {
   title: 'Components/Drag And Drop',

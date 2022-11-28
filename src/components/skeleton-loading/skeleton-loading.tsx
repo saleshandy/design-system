@@ -14,6 +14,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
   enableAnimation,
   count,
   className,
+  style,
 }) => {
   return (
     <Skeleton
@@ -26,6 +27,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
       highlightColor={highlightColor}
       enableAnimation={enableAnimation}
       count={count}
+      style={style}
     />
   );
 };
@@ -41,15 +43,17 @@ SkeletonLoading.propTypes = {
   enableAnimation: PropTypes.bool,
   count: PropTypes.number,
   borderRadius: PropTypes.number,
+  style: PropTypes.object,
 };
 
 SkeletonLoading.defaultProps = {
   width: 50,
   height: 14,
   baseColor: '#F3F4F6',
-  highlightColor: 'rgba(213, 216, 221, .6)',
+  highlightColor: '#E2E4E8',
   circle: false,
   enableAnimation: true,
   count: 1,
   borderRadius: 4,
+  style: {},
 };
