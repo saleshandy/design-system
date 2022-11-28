@@ -1,6 +1,9 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { SkeletonLoading, SkeletonLoadingProps } from '../';
+import {
+  SkeletonLoading,
+  SkeletonLoadingProps,
+} from '../components/skeleton-loading';
 
 export default {
   title: 'Components/Skeleton Loading',
@@ -21,7 +24,7 @@ Default.args = {
   count: 1,
   borderRadius: 4,
   baseColor: '#F3F4F6',
-  highlightColor: 'rgba(213, 216, 221, .6)',
+  highlightColor: '#E2E4E8',
 };
 
 export const Circle = Template.bind({});
