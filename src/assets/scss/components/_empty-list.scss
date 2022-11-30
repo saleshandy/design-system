@@ -1,0 +1,49 @@
+.shd-empty-list {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+
+  &--horizontal {
+    flex-direction: row;
+
+    .shd-empty-list--body {
+      align-items: flex-start;
+    }
+  }
+
+  &--image {
+    width: 9.75rem;
+    height: 10rem;
+  }
+
+  &--body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &--title {
+    font-family: $font-family-sans-serif;
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+    line-height: 1.5rem;
+    color: $gray-800;
+    margin: 0;
+  }
+
+  &--description {
+    font-family: $font-family-sans-serif;
+    font-size: 1rem;
+    font-weight: $font-weight-normal;
+    line-height: 1.5rem;
+    color: $gray-400;
+    margin: 0;
+  }
+}

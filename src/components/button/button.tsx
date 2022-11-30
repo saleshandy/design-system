@@ -2,20 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import { ButtonProps } from './types';
 import { ComponentClassNames } from '../../utils/constants';
 import {
   getClassNameByModifier,
   getClassNameByModifierBasedOnFlag,
 } from '../../utils/classname-modifiers';
-
-export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
-  variant?: 'primary' | 'secondary' | 'danger';
-  size?: 'small' | 'medium' | 'large';
-  isFullWidth?: boolean;
-  isLoading?: boolean;
-  iconIdentifier?: string;
-  iconPlacement?: 'left' | 'right';
-}
 
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
