@@ -1,7 +1,4 @@
-export type IProps = {
+export interface ImageIconProps extends React.ComponentPropsWithoutRef<'img'> {
   src: string;
-  alt?: string;
-  className?: string;
-  height?: number;
-  onClick?: () => void;
-};
+  alt: string;
+}

@@ -5,6 +5,9 @@ const classesPrefix = 'shd-';
 const ComponentClassNames: Record<string, string> = {
   Button: 'button',
   DragAndDrop: 'drag-and-drop',
+  Icon: 'icon',
+  ImageIcon: 'image-icon',
+  EmptyList: 'empty-list',
 };
 
 // Embed Prefix With Class Names

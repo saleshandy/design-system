@@ -1,0 +1,44 @@
+.note {
+  margin: 2rem 2rem 2rem 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+}
+
+.icon-story {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  &__card {
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 12px;
+    transition: all 0.2s ease;
+    color: gray;
+    background-color: transparent;
+
+    i {
+      font-size: 1.75rem;
+    }
+    span {
+      font-size: 12px;
+      text-align: center;
+    }
+
+    &:hover {
+      color: black;
+      border-color: black;
+    }
+  }
+}

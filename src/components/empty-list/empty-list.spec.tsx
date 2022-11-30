@@ -1,17 +1,27 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import EmptyList from './empty-list';
+import { EmptyList } from './empty-list';
 
 describe('Empty List', () => {
   it('applies title & description of empty list', () => {
     const { getByText } = render(
-      <EmptyList
-        title="Empty List Title"
-        description="Empty List Description"
-      />
+      <EmptyList>
+        <EmptyList.Body>
+          <EmptyList.Title>
+            Sorry, we couldn’t find what you are looking for
+          </EmptyList.Title>
+          <EmptyList.Description>
+            Please try searching with another term
+          </EmptyList.Description>
+        </EmptyList.Body>
+      </EmptyList>
     );
 
-    expect(getByText('Empty List Title')).toBeInTheDocument();
-    expect(getByText('Empty List Description')).toBeInTheDocument();
+    expect(
+      getByText('Sorry, we couldn’t find what you are looking for')
+    ).toBeInTheDocument();
+    expect(
+      getByText('Please try searching with another term')
+    ).toBeInTheDocument();
   });
 });

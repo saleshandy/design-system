@@ -1,59 +1,57 @@
-import classNames from 'classnames';
 import React from 'react';
-import { EmptyListProps } from './types';
-import { ImageIcon } from '../image-icon';
-import { Images } from '../../utils/images';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
-const EmptyList: React.FC<EmptyListProps> = ({
+import { EmptyListProps } from './types';
+
+import { ComponentClassNames } from '../../utils/constants';
+import { getClassNameByModifierBasedOnFlag } from '../../utils/classname-modifiers';
+
+import EmptyListImage from './components/empty-list-image';
+import EmptyListBody from './components/empty-list-body';
+import EmptyListTitle from './components/empty-list-title';
+import EmptyListDescription from './components/empty-list-description';
+
+export interface EmptyListComposition {
+  Image: typeof EmptyListImage;
+  Body: typeof EmptyListBody;
+  Title: typeof EmptyListTitle;
+  Description: typeof EmptyListDescription;
+}
+
+export const EmptyList: React.FC<EmptyListProps> & EmptyListComposition = ({
   children,
-  title,
-  description,
-  imgSrc = Images.EmptyData,
-  className,
-  isVertical = false,
+  isHorizontal,
+  ...rest
 }) => {
-  const emptyListInnerClass = classNames([
-    { 'empty-list__inner': !isVertical },
-    { 'empty-list__inner-vertical': isVertical },
-  ]);
-  const emptyListPhotoClass = classNames([
-    { 'empty-list__photo': !isVertical },
-    { 'empty-list__photo-vertical': isVertical },
-  ]);
-  const emptyListContentClass = classNames([
-    { 'empty-list__content': !isVertical },
-    { 'empty-list__content-vertical': isVertical },
-  ]);
-  const emptyListTitleClass = classNames([
-    { 'empty-list__title': !isVertical },
-    { 'empty-list__title-vertical': isVertical },
-  ]);
-  const emptyListBodyClass = classNames([
-    { 'empty-list__body': !isVertical },
-    { 'empty-list__body-vertical': isVertical },
-  ]);
-  const emptyListButtonClass = classNames([
-    { 'empty-list__buttons': !isVertical },
-    { 'empty-list__buttons-vertical': isVertical },
+  const emptyListClassNames = classNames([
+    ComponentClassNames.EmptyList,
+    getClassNameByModifierBasedOnFlag(
+      ComponentClassNames.EmptyList,
+      'horizontal',
+      isHorizontal
+    ),
   ]);
 
   return (
-    <div
-      className={classNames(['empty-list', className])}
-      data-testid="empty-list"
-    >
-      <div className={emptyListInnerClass}>
-        <div className={emptyListPhotoClass}>
-          <ImageIcon src={imgSrc} alt="empty-data/" />
-        </div>
-        <div className={emptyListContentClass}>
-          <div className={emptyListTitleClass}>{title}</div>
-          <p className={emptyListBodyClass}>{description}</p>
-          <div className={emptyListButtonClass}>{children}</div>
-        </div>
-      </div>
+    <div className={emptyListClassNames} {...rest}>
+      {children}
     </div>
   );
 };
 
-export default EmptyList;
+EmptyList.displayName = 'EmptyList';
+
+EmptyList.Image = EmptyListImage;
+EmptyList.Body = EmptyListBody;
+EmptyList.Title = EmptyListTitle;
+EmptyList.Description = EmptyListDescription;
+
+EmptyList.propTypes = {
+  children: PropTypes.node,
+  isHorizontal: PropTypes.bool,
+};
+
+EmptyList.defaultProps = {
+  isHorizontal: false,
+};

@@ -1,1 +1,2 @@
-export { default as ImageIcon } from "./image-icon";
+export * from './image-icon';
+export * from './types';

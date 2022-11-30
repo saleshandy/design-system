@@ -1,8 +1,6 @@
-export type EmptyListProps = {
-  children?: React.ReactNode;
-  title: React.ReactNode;
-  description: React.ReactNode;
-  imgSrc?: string;
-  className?: string;
-  isVertical?: boolean;
-};
+import { ReactNode } from 'react';
+
+export interface EmptyListProps {
+  isHorizontal?: boolean;
+  children?: ReactNode;
+}
