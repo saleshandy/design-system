@@ -8,42 +8,50 @@ import {
   progressBarBaseColor,
 } from './helper';
 
-export const ProgressBar: React.FC<ProgressBarProps> = ({
-  percentage,
-  baseColor = progressBarBaseColor,
-  hasBreakPoints = true,
-  width,
-  height,
-  breakPoints = progressBarDefaultBreakPoints,
-  colors = progressBarDefaultColors,
-}) => {
-  const [bgColor, setBgColor] = useState<string>(baseColor);
+export const ProgressBar: React.FC<ProgressBarProps> = React.forwardRef<
+  HTMLDivElement,
+  ProgressBarProps
+>(
+  (
+    {
+      percentage,
+      baseColor = progressBarBaseColor,
+      hasBreakPoints = true,
+      width,
+      height,
+      breakPoints = progressBarDefaultBreakPoints,
+      colors = progressBarDefaultColors,
+    },
+    ref
+  ) => {
+    const [bgColor, setBgColor] = useState<string>(baseColor);
 
-  useEffect(() => {
-    if (hasBreakPoints) {
-      breakPoints.forEach((point, index) => {
-        if (percentage >= point) {
-          setBgColor(colors[index]);
-        }
-      });
-    }
+    useEffect(() => {
+      if (hasBreakPoints) {
+        breakPoints.forEach((point, index) => {
+          if (percentage >= point) {
+            setBgColor(colors[index]);
+          }
+        });
+      }
 
-    return () => {
-      setBgColor(baseColor);
-    };
-  }, [percentage, hasBreakPoints, breakPoints, baseColor, colors]);
+      return () => {
+        setBgColor(baseColor);
+      };
+    }, [percentage, hasBreakPoints, breakPoints, baseColor, colors]);
 
-  return (
-    <div className="progress-bar" style={{ width, height }}>
-      <span style={{ width: `${percentage}%` }}>
-        <span
-          className="progress-bar__bar"
-          style={{ backgroundColor: bgColor }}
-        />
-      </span>
-    </div>
-  );
-};
+    return (
+      <div ref={ref} className="progress-bar" style={{ width, height }}>
+        <span style={{ width: `${percentage}%` }}>
+          <span
+            className="progress-bar__bar"
+            style={{ backgroundColor: bgColor }}
+          />
+        </span>
+      </div>
+    );
+  }
+);
 
 ProgressBar.displayName = 'ProgressBar';
 
