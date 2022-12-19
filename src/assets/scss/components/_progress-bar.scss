@@ -1,0 +1,37 @@
+.progress-bar {
+  height: 0.3125rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.875rem;
+  background-color: $gray-100;
+
+  span {
+    display: block;
+    height: 100%;
+  }
+
+  &__bar {
+    -webkit-animation: progressBar 3s ease-in-out;
+    -webkit-animation-fill-mode: both;
+    -moz-animation: progressBar 3s ease-in-out;
+    -moz-animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes progressBar {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @-moz-keyframes progressBar {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
