@@ -41,10 +41,10 @@ export const ProgressBar: React.FC<ProgressBarProps> = React.forwardRef<
     }, [percentage, hasBreakPoints, breakPoints, baseColor, colors]);
 
     return (
-      <div ref={ref} className="progress-bar" style={{ width, height }}>
+      <div ref={ref} className="progress-bar-wrapper" style={{ width, height }}>
         <span style={{ width: `${percentage}%` }}>
           <span
-            className="progress-bar__bar"
+            className="progress-bar-wrapper__bar"
             style={{ backgroundColor: bgColor }}
           />
         </span>
