@@ -12,8 +12,8 @@ export default {
   component: ProgressBar,
 } as Meta;
 
-const Template: Story<ProgressBarProps> = ({ width, height, ...args }) => (
-  <ProgressBar width={width} height={height} {...args} />
+const Template: Story<ProgressBarProps> = ({ ...args }) => (
+  <ProgressBar {...args} />
 );
 
 export const Default = Template.bind({});
@@ -24,6 +24,4 @@ Default.args = {
   hasBreakPoints: true,
   breakPoints: progressBarDefaultBreakPoints,
   colors: progressBarDefaultColors,
-  width: 399,
-  height: 10,
 };

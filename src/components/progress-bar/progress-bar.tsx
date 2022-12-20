@@ -17,8 +17,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = React.forwardRef<
       percentage,
       baseColor = progressBarBaseColor,
       hasBreakPoints = true,
-      width,
-      height,
       breakPoints = progressBarDefaultBreakPoints,
       colors = progressBarDefaultColors,
     },
@@ -41,7 +39,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = React.forwardRef<
     }, [percentage, hasBreakPoints, breakPoints, baseColor, colors]);
 
     return (
-      <div ref={ref} className="progress-bar-wrapper" style={{ width, height }}>
+      <div ref={ref} className="progress-bar-wrapper">
         <span style={{ width: `${percentage}%` }}>
           <span
             className="progress-bar-wrapper__bar"
@@ -60,8 +58,6 @@ ProgressBar.propTypes = {
   hasBreakPoints: PropTypes.bool,
   breakPoints: PropTypes.arrayOf(PropTypes.number.isRequired),
   colors: PropTypes.arrayOf(PropTypes.string.isRequired),
-  width: PropTypes.number,
-  height: PropTypes.number,
   baseColor: PropTypes.string,
 };
 
@@ -71,6 +67,4 @@ ProgressBar.defaultProps = {
   hasBreakPoints: true,
   breakPoints: progressBarDefaultBreakPoints,
   colors: progressBarDefaultColors,
-  width: 399,
-  height: 10,
 };
