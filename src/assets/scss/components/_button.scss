@@ -1,10 +1,195 @@
 .shd-button {
-  font-weight: 400;
+  height: 2rem;
+
+  padding: 0.375rem 1rem;
+
+  border: none;
+  border-radius: 0.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
   font-size: 0.875rem;
   line-height: 1.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  background: $brand;
-  color: $white;
-  padding: 0.5rem 1rem;
+  font-weight: $font-weight-medium;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    font-size: 1rem;
+  }
+
+  &--primary {
+    color: $white;
+    background-color: $blue-700;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $blue-800;
+    }
+
+    &:disabled {
+      background-color: $blue-700;
+    }
+  }
+
+  &--secondary {
+    color: $blue-700;
+    background-color: transparent;
+    border: 0.0625rem solid $blue-700;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $blue-100;
+    }
+
+    &:disabled {
+      background-color: transparent;
+    }
+
+    .shd-loader {
+      div {
+        border-color: $blue-700 transparent transparent transparent !important;
+      }
+    }
+  }
+
+  &--tertiary {
+    color: $gray-500;
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $gray-100;
+    }
+
+    &:disabled {
+      background-color: transparent;
+    }
+
+    .shd-loader {
+      div {
+        border-color: $gray-500 transparent transparent transparent !important;
+      }
+    }
+  }
+
+  &--link {
+    color: $blue-700;
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $blue-800;
+      text-decoration: underline;
+    }
+
+    &:disabled {
+      color: $blue-700;
+      text-decoration: none;
+    }
+
+    .shd-loader {
+      div {
+        border-color: $blue-700 transparent transparent transparent !important;
+      }
+    }
+  }
+
+  &--link-subtle {
+    color: $gray-500;
+    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $gray-600;
+      text-decoration: underline;
+    }
+
+    &:disabled {
+      color: $gray-500;
+      text-decoration: none;
+    }
+
+    .shd-loader {
+      div {
+        border-color: $gray-500 transparent transparent transparent !important;
+      }
+    }
+  }
+
+  &--danger {
+    color: $white;
+    background-color: $red-700;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $red-800;
+    }
+
+    &:disabled {
+      background-color: $red-700;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  &--fullWidth {
+    width: 100%;
+  }
+
+  // Styles For Loader
+  .shd-loader {
+    display: inline-block;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid $white;
+      border-radius: 50%;
+      animation: shd-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: $white transparent transparent transparent;
+
+      &:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      &:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      &:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+    }
+  }
+  @keyframes shd-loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
