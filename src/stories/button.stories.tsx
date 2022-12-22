@@ -11,7 +11,7 @@ export default {
     status: 'current',
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/0sIKDeMN2ztmlqvd1SWlEM/Design-system-v1.0-%F0%9F%93%81?node-id=10795%3A25308&t=JZWQfA6dmdQyjelD-0',
+      url: 'https://www.figma.com/file/0sIKDeMN2ztmlqvd1SWlEM/Design-system-v1.0-%F0%9F%93%81?node-id=10795%3A25276&t=ZEf4gFOay5G0HSwJ-3',
     },
   },
 } as Meta;
