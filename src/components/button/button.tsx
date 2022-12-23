@@ -13,8 +13,7 @@ import { Icon } from '../icon';
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
  * A button triggers an event or action. This let users know what will happen next.
- *
- * Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like:
+ * They are typically placed throughout your UI, in places like:
  * <br /> - Modal windows
  * <br /> - Forms
  * <br /> - Cards
