@@ -8,9 +8,11 @@ import {
   getClassNameByModifier,
   getClassNameByModifierBasedOnFlag,
 } from '../../utils/classname-modifiers';
+import { Icon } from '../icon';
 
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
+ * A button triggers an event or action. This let users know what will happen next.
  *
  * Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like:
  * <br /> - Modal windows
@@ -21,14 +23,14 @@ import {
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      className,
-      size,
-      variant,
-      isFullWidth,
-      disabled,
-      isLoading,
+      className = '',
+      variant = 'primary',
+      isFullWidth = false,
+      disabled = false,
+      isLoading = false,
+      loadingText = 'Loading...',
       children,
-      iconIdentifier,
+      iconIdentifier = '',
       iconPlacement,
       ...rest
     },
@@ -37,7 +39,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const componentClasses = classNames(
       ComponentClassNames.Button,
       getClassNameByModifier(ComponentClassNames.Button, variant),
-      getClassNameByModifier(ComponentClassNames.Button, size),
       getClassNameByModifierBasedOnFlag(
         ComponentClassNames.Button,
         'disabled',
@@ -50,10 +51,19 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       ),
       getClassNameByModifierBasedOnFlag(
         ComponentClassNames.Button,
-        'fullwidth',
+        'fullWidth',
         isFullWidth
       ),
       className
+    );
+
+    const renderLoader = () => (
+      <div className="shd-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     );
 
     return (
@@ -65,16 +75,15 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...rest}
       >
         {isLoading ? (
-          <span>Loading..</span>
+          <>
+            {renderLoader()}
+            <span>{loadingText}</span>
+          </>
         ) : (
           <>
-            {iconPlacement === 'left' && (
-              <span>Icon Left {iconIdentifier}</span>
-            )}
-            {children}
-            {iconPlacement === 'right' && (
-              <span>Icon Right {iconIdentifier}</span>
-            )}
+            {iconPlacement === 'left' && <Icon identifier={iconIdentifier} />}
+            <span>{children}</span>
+            {iconPlacement === 'right' && <Icon identifier={iconIdentifier} />}
           </>
         )}
       </button>
@@ -86,18 +95,17 @@ Button.displayName = 'Button';
 
 Button.propTypes = {
   children: PropTypes.node,
-  variant: PropTypes.oneOf(['secondary', 'primary', 'danger']),
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  variant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'danger',
+    'link',
+    'link-subtle',
+  ]),
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
+  loadingText: PropTypes.string,
   iconIdentifier: PropTypes.string,
   iconPlacement: PropTypes.oneOf(['left', 'right']),
-};
-
-Button.defaultProps = {
-  variant: 'secondary',
-  size: 'medium',
-  isFullWidth: false,
-  isLoading: false,
-  iconIdentifier: '',
 };
