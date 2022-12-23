@@ -13,10 +13,12 @@ import { Icon } from '../icon';
 export const getToast = ({
   variant = 'info',
   showCloseButton = false,
-  duration = 2500,
+  duration = 3000,
   content,
   position = 'bottom-center',
 }: ToastProps): string => {
+  const TOAST_DURATION = showCloseButton && duration === 3000 ? 5000 : duration;
+
   const componentClasses = classNames(
     ComponentClassNames.Toast,
     getClassNameByModifier(ComponentClassNames.Toast, variant),
@@ -59,11 +61,11 @@ export const getToast = ({
             )}
             onClick={() => toast.dismiss(t.id)}
           >
-            <Icon identifier="close" />
+            <Icon identifier="cross" />
           </button>
         )}
       </>
     ),
-    { position, duration, className: componentClasses }
+    { position, duration: TOAST_DURATION, className: componentClasses }
   );
 };

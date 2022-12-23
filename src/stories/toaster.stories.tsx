@@ -44,7 +44,7 @@ export default {
     duration: {
       description:
         'The duration in seconds after which the toaster will auto hide.',
-      defaultValue: 2500,
+      defaultValue: 3000,
     },
   },
 } as Meta;
@@ -71,5 +71,5 @@ export const Example = Template.bind({});
 Example.args = {
   position: 'bottom-center',
   showCloseButton: false,
-  duration: 2500,
+  duration: 3000,
 };
