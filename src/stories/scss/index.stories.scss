@@ -57,3 +57,13 @@
     }
   }
 }
+
+.buttons-story {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+}
