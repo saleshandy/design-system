@@ -5,10 +5,25 @@
   color: gray;
 }
 
-.icon-story {
+.icons-story {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+
+  &__wrapper {
+    h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      color: #1f2937;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
   &__card {
     width: 100px;
@@ -44,6 +59,16 @@
 }
 
 .toaster-story {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.buttons-story {
   &__container {
     display: flex;
     align-items: center;
