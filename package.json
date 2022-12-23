@@ -29,6 +29,7 @@
     "nanoid": "^3.1.20",
     "polished": "^4.1.0",
     "prop-types": "^15.7.2",
+    "react-hot-toast": "^2.4.0",
     "react-loading-skeleton": "^3.1.0"
   },
   "peerDependencies": {
@@ -71,6 +72,7 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^8.0.1",
+    "immer": "^9.0.16",
     "jest": "^26.6.3",
     "jest-svg-transformer": "^1.0.0",
     "prettier": "^2.2.1",
