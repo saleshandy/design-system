@@ -12,13 +12,22 @@ describe('Button', () => {
   });
 
   it('should have small size by default', () => {
-    render(<Avatar firstName="Shoaib" lastName="Sayyed" />);
+    render(
+      <Avatar data-testid="avatar" firstName="Shoaib" lastName="Sayyed" />
+    );
 
     expect(screen.getByTestId('avatar')).toHaveClass('shd-avatar--sm');
   });
 
   it('should have the size from prop', () => {
-    render(<Avatar firstName="Shoaib" lastName="Sayyed" size="lg" />);
+    render(
+      <Avatar
+        data-testid="avatar"
+        firstName="Shoaib"
+        lastName="Sayyed"
+        size="lg"
+      />
+    );
 
     expect(screen.getByTestId('avatar')).toHaveClass('shd-avatar--lg');
   });
