@@ -29,7 +29,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
 
     return (
       <div ref={ref} className={componentClasses} {...rest}>
-        <span>{initials || 'N/A'}</span>
+        <span>{initials}</span>
       </div>
     );
   }
