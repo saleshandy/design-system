@@ -3,6 +3,7 @@ const classesPrefix = 'shd-';
 
 // Define Component Class Names
 const ComponentClassNames: Record<string, string> = {
+  Avatar: 'avatar',
   Button: 'button',
   DragAndDrop: 'drag-and-drop',
   Icon: 'icon',

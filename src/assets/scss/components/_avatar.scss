@@ -1,0 +1,42 @@
+.shd-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4px;
+
+  border-radius: 50%;
+  background: $blue-50;
+  border: 1px solid $blue-100;
+  box-sizing: border-box;
+
+  span {
+    font-weight: $font-weight-medium;
+    line-height: 1rem;
+    color: $blue-700;
+  }
+
+  &--sm {
+    width: 1.5rem;
+    height: 1.5rem;
+    span {
+      font-size: 0.625rem;
+    }
+  }
+
+  &--md {
+    width: 1.75rem;
+    height: 1.75rem;
+    span {
+      font-size: 0.6875rem;
+    }
+  }
+
+  &--lg {
+    width: 2rem;
+    height: 2rem;
+    span {
+      font-size: 0.75rem;
+    }
+  }
+}
