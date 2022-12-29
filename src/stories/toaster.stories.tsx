@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import toaster, { ToastManager, ToastOptions } from '../components/toaster';
+import { toaster, ToastManager, ToastOptions } from '../components/toaster';
 import { Button } from '../components/button';
 
 /**
