@@ -10,6 +10,7 @@ const ComponentClassNames: Record<string, string> = {
   ImageIcon: 'image-icon',
   EmptyList: 'empty-list',
   Toast: 'toast',
+  Pills: 'pills',
 };
 
 // Embed Prefix With Class Names
