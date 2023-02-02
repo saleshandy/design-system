@@ -1,0 +1,64 @@
+.shd-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+
+  width: max-content;
+  box-sizing: border-box;
+
+  .pills-icon {
+    color: $gray-500;
+  }
+
+  .pills-label {
+    font-weight: $font-weight-medium;
+    text-align: center;
+  }
+
+  .pills-close {
+    color: $gray-500;
+    margin-left: 0.125rem;
+    cursor: pointer;
+  }
+
+  &--sm {
+    height: 1.25rem;
+    padding: 0.125rem 0.3125rem;
+    border-radius: 0.125rem;
+
+    .pills-label {
+      font-size: 0.625rem;
+      line-height: 1rem;
+    }
+
+    i {
+      font-size: 0.75rem;
+    }
+  }
+
+  &--md {
+    height: 1.5rem;
+    padding: 0.1875rem 0.5rem;
+    border-radius: 0.25rem;
+
+    .pills-label {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+    }
+
+    i {
+      font-size: 0.875rem;
+    }
+  }
+
+  &--solid {
+    color: $gray-500;
+    background: $gray-100;
+  }
+
+  &--outline {
+    color: $gray-800;
+    background: transparent;
+    border: 0.0625rem solid $gray-200;
+  }
+}
