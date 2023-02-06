@@ -11,3 +11,4 @@ export * from './components/progress-bar';
 export * from './components/skeleton-loading';
 export * from './components/toaster';
 export * from './components/pills';
+export * from './components/accordion';

@@ -11,6 +11,7 @@ const ComponentClassNames: Record<string, string> = {
   EmptyList: 'empty-list',
   Toast: 'toast',
   Pills: 'pills',
+  Accordion: 'accordion',
 };
 
 // Embed Prefix With Class Names
