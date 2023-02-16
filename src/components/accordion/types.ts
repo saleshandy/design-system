@@ -10,4 +10,7 @@ export interface AccordionProps {
   // Callback which is invoked when items are expanded or collapsed.
   //   Gets passed uuids of the currently expanded AccordionItems.
   onChange?: (uuids: string[], expanded?: boolean, disabled?: boolean) => void;
+
+  // Rest Props
+  [props: string]: any;
 }
