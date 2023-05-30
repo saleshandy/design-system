@@ -52,7 +52,3 @@ Default.args = {
   transitionTime: 500,
   swipeScrollTolerance: 5,
 };
-
-// export const Default = Template.bind({});
-
-// Default.args = {};
