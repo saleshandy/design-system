@@ -1,1 +1,3 @@
-export type { CarouselProps } from 'react-responsive-carousel';
+import { CarouselProps as ReactResponsiveCarouselProps } from 'react-responsive-carousel';
+
+export type CarouselProps = Partial<ReactResponsiveCarouselProps>;
