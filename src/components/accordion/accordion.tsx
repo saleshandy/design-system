@@ -7,6 +7,7 @@ import {
   AccordionItemButton,
   AccordionItemHeading,
   AccordionItemPanel,
+  AccordionItemState,
 } from 'react-accessible-accordion';
 
 import { AccordionProps } from './types';
@@ -17,6 +18,7 @@ interface AccordionComposition {
   ItemHeading: typeof AccordionItemHeading;
   ItemButton: typeof AccordionItemButton;
   ItemPanel: typeof AccordionItemPanel;
+  ItemState: typeof AccordionItemState;
 }
 
 export const Accordion: React.FC<AccordionProps> & AccordionComposition = ({
@@ -40,6 +42,7 @@ Accordion.Item = AccordionItem;
 Accordion.ItemHeading = AccordionItemHeading;
 Accordion.ItemButton = AccordionItemButton;
 Accordion.ItemPanel = AccordionItemPanel;
+Accordion.ItemState = AccordionItemState;
 
 Accordion.propTypes = {
   children: PropTypes.node,
