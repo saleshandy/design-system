@@ -12,7 +12,10 @@ const Template: Story<AccordionProps> = (args) => (
     <Accordion.Item>
       <Accordion.ItemHeading>
         <Accordion.ItemButton>
-          This is an accordion title 1
+          This is an accordion title 1 -{' '}
+          <Accordion.ItemState>
+            {({ expanded }) => (expanded ? 'Expanded' : 'Collapsed')}
+          </Accordion.ItemState>
         </Accordion.ItemButton>
       </Accordion.ItemHeading>
       <Accordion.ItemPanel>
