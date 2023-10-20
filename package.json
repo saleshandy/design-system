@@ -34,7 +34,9 @@
     "react-accessible-accordion": "^5.0.0",
     "react-hot-toast": "^2.4.0",
     "react-loading-skeleton": "^3.1.0",
-    "react-responsive-carousel": "^3.2.23"
+    "react-range": "^1.8.14",
+    "react-responsive-carousel": "^3.2.23",
+    "rsuite": "^5.39.0"
   },
   "peerDependencies": {
     "node-sass": "^5.0.0",

@@ -14,3 +14,4 @@ export * from './components/toaster';
 export * from './components/pills';
 export * from './components/accordion';
 export * from './components/carousel';
+export * from './components/range-input';
