@@ -1,3 +1,7 @@
+@function pxToRem($pxSize) {
+  @return $pxSize / 16 + rem;
+}
+
 //* Font Size
 @mixin font-size-class() {
   $font-size-list: 8 10 12 14 16 20 24;
@@ -7,6 +11,8 @@
     }
   }
 }
+
+@include font-size-class();
 
 //* Font Weight
 $font-weights: (
@@ -27,6 +33,8 @@ $font-weights: (
   }
 }
 
+@include font-weight();
+
 //* Line Height
 @mixin line-height() {
   $font-size-list: 8 10 12 14 16 20 24;
@@ -36,3 +44,5 @@ $font-weights: (
     }
   }
 }
+
+@include line-height();
