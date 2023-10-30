@@ -17,7 +17,7 @@ export const Tag: React.FC<TagProps> = ({ text, variant, className }) => {
       case 'tertiary':
         return {
           backgroundColor: '#FFFBEB',
-          color: '##D97706',
+          color: '#D97706',
         };
       case 'danger':
         return {
