@@ -1,6 +1,64 @@
-import { Meta, Description } from '@storybook/addon-docs/blocks';
-import README from '../../README.md';
+import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="Components/Introduction" />
+<Meta title="Introduction" />
 
-<Description>{README}</Description>
+The Saleshandy design system came to bring a series of benefits and to solve common problems in the development workflow.
+
+### The main benefits are:
+
+---
+
+- Keep visual consistency between components, pages and projects
+- Create easily maintainable components
+- Develop a common language between Design and Front-end teams
+- Single source of truth to style code
+- Faster development of pages and features (keeping quality and isolation of code)
+- Using css as base, the consumer applications can use almost any technology or framework such as React and css-in-js libraries
+
+### Get started
+
+---
+
+- <b>Explore UI components:</b> Click on any of the component in the sidebar to see
+  how they look, and how to configure them. Each component pages contains documentation
+  of its properties, as well as code examples for how to use it.
+- <b>Try them out:</b>
+
+  - Experiment with different properties, by clicking Canvas at the top of each component page and pressing "a" to show Addons.
+  - Change the properties under Controls in the bottom panel.
+
+- <b>Use them:</b> Once you've found the right component for your use case, click
+  the Docs tab to see the code implementation.
+
+### Installation
+
+---
+
+`yarn add @saleshandy/design-system`
+
+`npm install @saleshandy/design-system`
+
+### Use
+
+---
+
+```console
+  import { Button } from "@saleshandy/design-system"
+```
+
+```console
+const example = () => (
+  <div>
+    <Button>
+      Submit
+    </Button>
+  </div>
+)
+```
+
+### Main Tech Stack
+
+---
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
