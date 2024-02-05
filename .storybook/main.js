@@ -13,15 +13,15 @@ module.exports = {
     '@storybook/preset-scss',
     'storybook-addon-sass-postcss',
     'storybook-addon-designs',
-    '@storybook/addon-mdx-gfm'
+    '@storybook/addon-mdx-gfm',
   ],
 
   framework: {
     name: '@storybook/react-webpack5',
-    options: {}
+    options: {},
   },
 
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };
