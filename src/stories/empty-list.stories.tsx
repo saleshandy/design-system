@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { EmptyList, EmptyListProps } from '../components/empty-list';
 import { ImageIcon } from '../components/image-icon';
 
@@ -14,7 +14,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<EmptyListProps> = (args) => (
+const Template: StoryFn<EmptyListProps> = (args) => (
   <EmptyList {...args}>
     <EmptyList.Image>
       <ImageIcon

@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "@saleshandy/icons": "^1.1.1",
+    "@saleshandy/icons": "^1.5.3",
     "classnames": "^2.3.2",
     "goober": "^2.1.11",
     "nanoid": "^3.1.20",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 import toast from 'react-hot-toast';
 
@@ -8,7 +8,7 @@ import {
   getClassNameByModifier,
   getClassNameByModifierBasedOnFlag,
 } from '../../utils/classname-modifiers';
-import { Icon } from '../icon';
+import { AlertTriangle, Checks, Cross, InfoCircle } from '@saleshandy/icons';
 
 export const getToast = ({
   variant = 'info',
@@ -29,14 +29,14 @@ export const getToast = ({
     )
   );
 
-  const getToastIconIdentifier = (): string => {
+  const getToastIconIdentifier = (): ReactElement => {
     if (variant === 'success') {
-      return 'checks';
+      return <Checks />;
     }
     if (variant === 'error') {
-      return 'alert-triangle';
+      return <AlertTriangle />;
     }
-    return 'info-circle';
+    return <InfoCircle />;
   };
 
   return toast(
@@ -48,7 +48,7 @@ export const getToast = ({
             'content'
           )}
         >
-          <Icon identifier={getToastIconIdentifier()} />
+          {getToastIconIdentifier()}
 
           <span>{content}</span>
         </div>
@@ -61,7 +61,7 @@ export const getToast = ({
             )}
             onClick={() => toast.dismiss(t.id)}
           >
-            <Icon identifier="cross" />
+            <Cross />
           </button>
         )}
       </>

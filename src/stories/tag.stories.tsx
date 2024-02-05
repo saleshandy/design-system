@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Tag, TagProps } from '../components/tag';
 
 export default {
@@ -20,7 +20,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<TagProps> = (args) => <Tag {...args} />;
+const Template: StoryFn<TagProps> = (args) => <Tag {...args} />;
 
 export const Default = Template.bind({});
 

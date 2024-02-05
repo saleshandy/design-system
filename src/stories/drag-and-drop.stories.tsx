@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { DragAndDrop, DragAndDropProps } from '../components/drag-and-drop';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: DragAndDrop,
 } as Meta;
 
-const Template: Story<DragAndDropProps> = (args) => {
+const Template: StoryFn<DragAndDropProps> = (args) => {
   const [dragging, setDragging] = useState(false);
 
   const handleDroppedFiles = (files: FileList) => {

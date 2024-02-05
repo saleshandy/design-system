@@ -4,7 +4,7 @@ export interface PillsProps extends React.ComponentPropsWithoutRef<'div'> {
   // variant?:
   //   | 'primary'
   //   | 'secondary';
-  iconIdentifier?: string;
+  icon?: React.FC;
   label?: string;
   showCloseIcon?: boolean;
   onClose?: VoidFunction;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { toaster, ToastManager, ToastOptions } from '../components/toaster';
 import { Button } from '../components/button';
 
@@ -49,7 +49,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ToastOptions> = (args) => {
+const Template: StoryFn<ToastOptions> = (args) => {
   const showInfoToast = () =>
     toaster.info('Please note this simple info', args);
   const showSuccessToast = () =>

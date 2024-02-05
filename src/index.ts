@@ -6,7 +6,6 @@ export * from './components/avatar';
 export * from './components/button';
 export * from './components/drag-and-drop';
 export * from './components/empty-list';
-export * from './components/icon';
 export * from './components/image-icon';
 export * from './components/progress-bar';
 export * from './components/skeleton-loading';

@@ -6,7 +6,6 @@ const ComponentClassNames: Record<string, string> = {
   Avatar: 'avatar',
   Button: 'button',
   DragAndDrop: 'drag-and-drop',
-  Icon: 'icon',
   ImageIcon: 'image-icon',
   EmptyList: 'empty-list',
   Toast: 'toast',

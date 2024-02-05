@@ -9,6 +9,6 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   isFullWidth?: boolean;
   isLoading?: boolean;
   loadingText?: string;
-  iconIdentifier?: string;
+  icon?: React.FC;
   iconPlacement?: 'left' | 'right';
 }
