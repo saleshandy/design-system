@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { ButtonProps } from './types';
@@ -8,7 +7,6 @@ import {
   getClassNameByModifier,
   getClassNameByModifierBasedOnFlag,
 } from '../../utils/classname-modifiers';
-import { Icon } from '../icon';
 
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
@@ -29,7 +27,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       isLoading = false,
       loadingText = 'Loading...',
       children,
-      iconIdentifier = '',
+      icon: Icon,
       iconPlacement,
       ...rest
     },
@@ -80,9 +78,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           </>
         ) : (
           <>
-            {iconPlacement === 'left' && <Icon identifier={iconIdentifier} />}
+            {iconPlacement === 'left' && Icon && <Icon />}
             <span>{children}</span>
-            {iconPlacement === 'right' && <Icon identifier={iconIdentifier} />}
+            {iconPlacement === 'right' && Icon && <Icon />}
           </>
         )}
       </button>
@@ -91,20 +89,3 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = 'Button';
-
-Button.propTypes = {
-  children: PropTypes.node,
-  variant: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'danger',
-    'link',
-    'link-subtle',
-  ]),
-  isFullWidth: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  loadingText: PropTypes.string,
-  iconIdentifier: PropTypes.string,
-  iconPlacement: PropTypes.oneOf(['left', 'right']),
-};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Accordion, AccordionProps } from '../components/accordion';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: Accordion,
 } as Meta;
 
-const Template: Story<AccordionProps> = (args) => (
+const Template: StoryFn<AccordionProps> = (args) => (
   <Accordion {...args}>
     <Accordion.Item>
       <Accordion.ItemHeading>

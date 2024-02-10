@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Pills, PillsProps } from '../components/pills';
 
 export default {
@@ -32,7 +32,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<PillsProps> = (args) => <Pills {...args} />;
+const Template: StoryFn<PillsProps> = (args) => <Pills {...args} />;
 
 export const Default = Template.bind({});
 
@@ -41,6 +41,5 @@ Default.args = {
   size: 'sm',
   label: 'Outbound Cold Email',
   showCloseIcon: false,
-  iconIdentifier: '',
   onClose: () => alert('Pill will be removed'),
 };

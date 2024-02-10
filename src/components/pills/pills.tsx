@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { PillsProps } from './types';
@@ -8,7 +7,7 @@ import {
   getClassNameByModifier,
   getClassNameByModifierBasedOnFlag,
 } from '../../utils/classname-modifiers';
-import { Icon } from '../icon';
+import { Cross } from '@saleshandy/icons';
 
 export const Pills = React.forwardRef<HTMLDivElement, PillsProps>(
   (
@@ -18,7 +17,7 @@ export const Pills = React.forwardRef<HTMLDivElement, PillsProps>(
       size = 'sm',
       label = '',
       showCloseIcon = false,
-      iconIdentifier = '',
+      icon: Icon,
       onClose,
       ...rest
     },
@@ -38,25 +37,12 @@ export const Pills = React.forwardRef<HTMLDivElement, PillsProps>(
 
     return (
       <div ref={ref} className={componentClasses} {...rest}>
-        {iconIdentifier && (
-          <Icon className="pills-icon" identifier={iconIdentifier} />
-        )}
+        {Icon && <Icon />}
         <span className="pills-label">{label}</span>
-        {showCloseIcon && (
-          <Icon className="pills-close" identifier="cross" onClick={onClose} />
-        )}
+        {showCloseIcon && <Cross className="pills-close" onClick={onClose} />}
       </div>
     );
   }
 );
 
 Pills.displayName = 'Pills';
-
-Pills.propTypes = {
-  theme: PropTypes.oneOf(['solid', 'outline']),
-  size: PropTypes.oneOf(['sm', 'md']),
-  label: PropTypes.string,
-  iconIdentifier: PropTypes.string,
-  showCloseIcon: PropTypes.bool,
-  onClose: PropTypes.func,
-};

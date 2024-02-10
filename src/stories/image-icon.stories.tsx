@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { ImageIcon, ImageIconProps } from '../components/image-icon';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: ImageIcon,
 } as Meta;
 
-const Template: Story<ImageIconProps> = (args) => <ImageIcon {...args} />;
+const Template: StoryFn<ImageIconProps> = (args) => <ImageIcon {...args} />;
 
 export const Default = Template.bind({});
 

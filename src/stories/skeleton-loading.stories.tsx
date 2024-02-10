@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import {
   SkeletonLoading,
   SkeletonLoadingProps,
@@ -10,9 +10,11 @@ export default {
   component: SkeletonLoading,
 } as Meta;
 
-const Template: Story<SkeletonLoadingProps> = ({ width, height, ...args }) => (
-  <SkeletonLoading width={width} height={height} {...args} />
-);
+const Template: StoryFn<SkeletonLoadingProps> = ({
+  width,
+  height,
+  ...args
+}) => <SkeletonLoading width={width} height={height} {...args} />;
 
 export const Default = Template.bind({});
 

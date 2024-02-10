@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Avatar, AvatarProps } from '../components/avatar';
 
 export default {
@@ -25,7 +25,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
+const Template: StoryFn<AvatarProps> = (args) => <Avatar {...args} />;
 
 export const Default = Template.bind({});
 
