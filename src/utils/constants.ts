@@ -12,6 +12,7 @@ const ComponentClassNames: Record<string, string> = {
   Pills: 'pills',
   Accordion: 'accordion',
   Carousel: 'carousel',
+  Input: 'input',
 };
 
 // Embed Prefix With Class Names
