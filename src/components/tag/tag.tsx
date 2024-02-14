@@ -33,11 +33,8 @@ export const Tag: React.FC<TagProps> = ({ text, variant, className }) => {
   };
 
   return (
-    <span
-      className={`tag font-12 font-medium ${className}`}
-      style={getTagStyle()}
-    >
-      {text}
-    </span>
+    <div className={`tag ${className}`} style={getTagStyle()}>
+      <p className="font-12 font-medium">{text}</p>
+    </div>
   );
 };
