@@ -1,0 +1,89 @@
+// .search-input-container {
+//   position: relative;
+
+//   .search-icon {
+//     position: absolute;
+//     top: 74%;
+//     color: $gray-400;
+//     transform: translateY(-50%);
+//     left: 12px;
+
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       border-color: $blue-700;
+//       outline-color: $blue-700;
+//       cursor: text;
+//     }
+//   }
+
+//   .input {
+//     padding-left: 2.2rem;
+//     width: 182px;
+//   }
+
+//   .cross-icon {
+//     position: absolute;
+//     right: 0.5rem;
+//     left: 13.4375rem;
+//     top: 57%;
+//     color: $gray-400;
+//     cursor: pointer;
+//   }
+// }
+
+
+// new component
+/* search-input.scss */
+.shd-search-input {
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    top: 53%;
+    color: $gray-400;
+    transform: translateY(-50%);
+    left: 12px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .input {
+    padding-left: 2.2rem;
+    padding-right: 1.6rem;
+    width: 216px;
+    height: 32px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $blue-700;
+      outline-color: $blue-700;
+      cursor: text;
+    }
+
+    &.bg-light {
+      background-color: #FFFFFF;
+    }
+
+    &.bg-gray {
+      background-color: #F9FAFB;
+      &:focus {
+        background-color: #FFFFFF;
+      }
+    }
+  }
+
+  .cross-icon {
+    position: absolute;
+    left: 15.83rem;
+    top: 30%;
+    color: $gray-400;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+  }
+}
+
