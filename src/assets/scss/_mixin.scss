@@ -1,5 +1,5 @@
 @function pxToRem($pxSize) {
-  @return $pxSize / 16 + rem;
+  @return calc($pxSize / 16) + rem;
 }
 
 //* Font Size

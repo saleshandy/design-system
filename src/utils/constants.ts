@@ -6,13 +6,13 @@ const ComponentClassNames: Record<string, string> = {
   Avatar: 'avatar',
   Button: 'button',
   DragAndDrop: 'drag-and-drop',
-  Icon: 'icon',
   ImageIcon: 'image-icon',
   EmptyList: 'empty-list',
   Toast: 'toast',
   Pills: 'pills',
   Accordion: 'accordion',
   Carousel: 'carousel',
+  Input: 'input',
 };
 
 // Embed Prefix With Class Names

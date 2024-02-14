@@ -16,11 +16,11 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v2
         with:
-          node-version: '15.x'
+          node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install deps
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Run Test 🧪
         run: npm run test

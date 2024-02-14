@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { ProgressBar, ProgressBarProps } from '../components/progress-bar';
 import {
   progressBarBaseColor,
@@ -12,7 +12,7 @@ export default {
   component: ProgressBar,
 } as Meta;
 
-const Template: Story<ProgressBarProps> = ({ ...args }) => (
+const Template: StoryFn<ProgressBarProps> = ({ ...args }) => (
   <ProgressBar {...args} />
 );
 

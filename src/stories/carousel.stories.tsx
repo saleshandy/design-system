@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Carousel, CarouselProps } from '../components/carousel';
 
 export default {
@@ -18,7 +18,7 @@ const defaultStyles: CSSProperties = {
   fontWeight: 'bold',
 };
 
-const Template: Story<CarouselProps> = (args) => (
+const Template: StoryFn<CarouselProps> = (args) => (
   <Carousel {...args}>
     <div style={{ ...defaultStyles, backgroundColor: '#ffadad' }}>
       <span>1</span>

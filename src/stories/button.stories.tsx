@@ -1,7 +1,7 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { Button, ButtonProps } from '../components/button';
-import { Icon } from '../components/icon';
+import { Target } from '@saleshandy/icons';
 
 export default {
   title: 'Components/Button',
@@ -14,7 +14,7 @@ export default {
   },
 } as Meta;
 
-export const Example: Story<ButtonProps> = ({ children, ...args }) => (
+export const Example: StoryFn<ButtonProps> = ({ children, ...args }) => (
   <Button {...args}>{children}</Button>
 );
 
@@ -27,7 +27,7 @@ Example.args = {
   loadingText: 'Loading...',
 };
 
-export const Variants: Story<ButtonProps> = () => (
+export const Variants: StoryFn<ButtonProps> = () => (
   <div className="buttons-story__container">
     <Button variant="primary">Primary</Button>
     <Button variant="secondary">Secondary</Button>
@@ -38,7 +38,7 @@ export const Variants: Story<ButtonProps> = () => (
   </div>
 );
 
-export const Disabled: Story<ButtonProps> = () => (
+export const Disabled: StoryFn<ButtonProps> = () => (
   <div className="buttons-story__container">
     <Button variant="primary" disabled={true}>
       Primary
@@ -61,7 +61,7 @@ export const Disabled: Story<ButtonProps> = () => (
   </div>
 );
 
-export const Loading: Story<ButtonProps> = () => (
+export const Loading: StoryFn<ButtonProps> = () => (
   <div className="buttons-story__container">
     <Button variant="primary" isLoading={true} loadingText="Saving...">
       Primary
@@ -84,57 +84,57 @@ export const Loading: Story<ButtonProps> = () => (
   </div>
 );
 
-export const IconOnly: Story<ButtonProps> = () => (
+export const IconOnly: StoryFn<ButtonProps> = () => (
   <div className="buttons-story__container">
     <Button variant="primary">
-      <Icon identifier="target" />
+      <Target />
     </Button>
     <Button variant="secondary">
-      <Icon identifier="target" />
+      <Target />
     </Button>
     <Button variant="tertiary">
-      <Icon identifier="target" />
+      <Target />
     </Button>
     <Button variant="danger">
-      <Icon identifier="target" />
+      <Target />
     </Button>
   </div>
 );
 
-export const WithIconAndLabel: Story<ButtonProps> = () => (
+export const WithIconAndLabel: StoryFn<ButtonProps> = () => (
   <>
     <div className="buttons-story__container">
-      <Button variant="primary" iconIdentifier="target" iconPlacement="left">
+      <Button variant="primary" icon={Target} iconPlacement="left">
         Primary
       </Button>
-      <Button variant="secondary" iconIdentifier="target" iconPlacement="left">
+      <Button variant="secondary" icon={Target} iconPlacement="left">
         Secondary
       </Button>
-      <Button variant="tertiary" iconIdentifier="target" iconPlacement="left">
+      <Button variant="tertiary" icon={Target} iconPlacement="left">
         Tertiary
       </Button>
-      <Button variant="danger" iconIdentifier="target" iconPlacement="left">
+      <Button variant="danger" icon={Target} iconPlacement="left">
         Danger
       </Button>
     </div>
     <div className="buttons-story__container">
-      <Button variant="primary" iconIdentifier="target" iconPlacement="right">
+      <Button variant="primary" icon={Target} iconPlacement="right">
         Primary
       </Button>
-      <Button variant="secondary" iconIdentifier="target" iconPlacement="right">
+      <Button variant="secondary" icon={Target} iconPlacement="right">
         Secondary
       </Button>
-      <Button variant="tertiary" iconIdentifier="target" iconPlacement="right">
+      <Button variant="tertiary" icon={Target} iconPlacement="right">
         Tertiary
       </Button>
-      <Button variant="danger" iconIdentifier="target" iconPlacement="right">
+      <Button variant="danger" icon={Target} iconPlacement="right">
         Danger
       </Button>
     </div>
   </>
 );
 
-export const FullWidth: Story<ButtonProps> = () => (
+export const FullWidth: StoryFn<ButtonProps> = () => (
   <div className="buttons-story__container">
     <Button variant="primary" isFullWidth={true}>
       Primary
