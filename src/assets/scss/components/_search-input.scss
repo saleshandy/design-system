@@ -1,0 +1,80 @@
+.shd-search-input{
+    border: 0.0625rem solid $gray-300;
+    width: 216px;
+    display: flex;
+    align-items: center;
+    padding-left:12px;
+    padding-right:  12px ;
+    gap: 8px;
+    border-radius: 4px;
+
+    &--bg-light {
+        background-color: #FFFFFF; 
+      }
+      
+      &--bg-gray {
+        background-color: #F9FAFB; 
+        &:focus-within{
+            background-color: #FFFFFF;
+        }
+      }
+
+    &:hover{
+        border-color: $blue-700;
+        outline-color: $blue-700;
+    }
+      &:active{
+        border-color: $blue-700;
+        outline-color: $blue-700;
+      }
+      &:focus {
+        border: 0px;
+        border-color: $blue-700;
+        outline-color: $blue-700;
+        cursor: text;
+      }
+.input {
+    width: 11.875rem;
+    height: 2rem;
+    border: 0px;
+    margin-left: 0.75rem;
+    
+    &--bg-gray {
+        background-color: #F9FAFB; 
+        &:focus{
+            background-color: #FFFFFF;
+        }
+      }
+
+    &:focus-visible{
+        border: 0px;
+        outline: none;
+    }
+    .input:focus{
+        outline: none;
+    }
+  
+    
+}
+
+.cross-icon {
+  position: absolute;
+  left: 14.375rem;
+  top: 35%;
+  color: $gray-400;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+  svg.search-icon {
+    position: absolute;
+    top: 50%;
+    color: $gray-400;
+    transform: translateY(-50%);
+    left: 1rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+}
