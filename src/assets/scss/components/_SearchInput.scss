@@ -1,0 +1,71 @@
+// .search-input-container {
+//   position: relative;
+
+//   .search-icon {
+//     position: absolute;
+//     top: 74%;
+//     color: $gray-400;
+//     transform: translateY(-50%);
+//     left: 12px;
+
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       border-color: $blue-700;
+//       outline-color: $blue-700;
+//       cursor: text;
+//     }
+//   }
+
+//   .input {
+//     padding-left: 2.2rem;
+//     width: 182px;
+//   }
+
+//   .cross-icon {
+//     position: absolute;
+//     right: 0.5rem;
+//     left: 13.4375rem;
+//     top: 57%;
+//     color: $gray-400;
+//     cursor: pointer;
+//   }
+// }
+
+
+// new component
+.search-input {
+  position: relative;
+
+
+  .search-icon {
+    position: absolute;
+    top: 70%;
+    color: $gray-400;
+    transform: translateY(-50%);
+    left: 12px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $blue-700;
+      outline-color: $blue-700;
+      cursor: text;
+    }
+  }
+
+  .input {
+    padding-left: 2.2rem;
+    padding-right: 1.6rem;
+    width: 182px;
+  }
+
+  .cross-icon {
+    position: absolute;
+    right: 0.5rem;
+    left: 13.83rem;
+    top: 53%;
+    color: $gray-400;
+    cursor: pointer;
+  }
+}
