@@ -1,4 +1,11 @@
 .tag {
   border-radius: 1.25rem;
   padding: 0.125rem 0.5rem;
+  display: inline-block;
+  text-align: center;
+
+  p {
+    margin: 0px;
+    line-height: 1.25rem;
+  }
 }

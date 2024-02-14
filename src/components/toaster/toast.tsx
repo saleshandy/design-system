@@ -9,6 +9,7 @@ import {
   getClassNameByModifierBasedOnFlag,
 } from '../../utils/classname-modifiers';
 import { Icon } from '../icon';
+import { AlertTriangle, Checks, InfoCircle } from '@saleshandy/icons';
 
 export const getToast = ({
   variant = 'info',
@@ -29,14 +30,14 @@ export const getToast = ({
     )
   );
 
-  const getToastIconIdentifier = (): string => {
+  const getToastIconIdentifier = () => {
     if (variant === 'success') {
-      return 'checks';
+      return <Checks width={20} height={20} />;
     }
     if (variant === 'error') {
-      return 'alert-triangle';
+      return <AlertTriangle width={20} height={20} />;
     }
-    return 'info-circle';
+    return <InfoCircle width={20} height={20} />;
   };
 
   return toast(
@@ -48,7 +49,7 @@ export const getToast = ({
             'content'
           )}
         >
-          <Icon identifier={getToastIconIdentifier()} />
+          {getToastIconIdentifier()}
 
           <span>{content}</span>
         </div>
