@@ -13,14 +13,12 @@ export const SearchInput = React.forwardRef<HTMLDivElement, SearchInputProps>(
       className = '',
       onSearch,
       onClearSearch,
-      searchValue,
-      setSearchValue,
-      initialValue = '',
+      search,
+      setSearch,
       ...rest
     },
     ref
   ) => {
-    const [value, setValue] = useState(initialValue);
 
     const componentClasses = classNames(
       ComponentClassNames.SearchInput,
@@ -29,7 +27,7 @@ export const SearchInput = React.forwardRef<HTMLDivElement, SearchInputProps>(
     );
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValue(event.target.value);
+        setSearch(event.target.value);
     };
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -39,7 +37,7 @@ export const SearchInput = React.forwardRef<HTMLDivElement, SearchInputProps>(
     };
 
     const handleClear = () => {
-      setValue('');
+        setSearch('');
       if (onClearSearch) {
         onClearSearch();
       }
@@ -49,17 +47,86 @@ export const SearchInput = React.forwardRef<HTMLDivElement, SearchInputProps>(
       <div className={componentClasses} {...rest} ref={ref}>
         <Search className="search-icon" />
         <input
-          id="search-input "
-          className={`input ${componentClasses}`}
+          className='input'
           placeholder={placeholder}
-          value={value}
+          value={search}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
-        {value && <CircleCross className="cross-icon" onClick={handleClear} />}
+        {search && <CircleCross className="cross-icon" onClick={handleClear} />}
       </div>
     );
   }
 );
 
 SearchInput.displayName = 'SearchInput';
+
+// import React, { useState } from 'react';
+// import { Search, CircleCross } from '@saleshandy/icons';
+// import classNames from 'classnames';
+// import { SearchInputProps } from './type';
+// import { ComponentClassNames } from '../../utils/constants';
+// import { getClassNameByModifier } from '../../utils/classname-modifiers';
+
+// export const SearchInput = React.forwardRef<HTMLDivElement, SearchInputProps>(
+//   (
+//     {
+//       placeholder = 'Search',
+//       variant = 'bg-light',
+//       className = '',
+//       onSearch,
+//       onClearSearch,
+//       search,
+//       setSearch,
+//       ...rest
+//     },
+//     ref
+//   ) => {
+//     const [inputValue, setInputValue] = useState(search);
+
+//     const componentClasses = classNames(
+//       ComponentClassNames.SearchInput,
+//       getClassNameByModifier(ComponentClassNames.SearchInput, variant),
+//       className
+//     );
+
+//     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+//       const value = event.target.value;
+//       setInputValue(value);
+//       setSearch(value);
+//     };
+
+//     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+//       if (event.key === 'Enter' && onSearch) {
+//         onSearch();
+//       }
+//     };
+
+//     const handleClear = () => {
+//       setInputValue('');
+//       setSearch('');
+//       if (onClearSearch) {
+//         onClearSearch();
+//       }
+//     };
+
+//     return (
+//       <div className={componentClasses} {...rest} ref={ref}>
+//         <Search className="search-icon" />
+//         <input
+//           id="search-input"
+//           className="input"
+//           placeholder={placeholder}
+//           value={inputValue}
+//           onChange={handleChange}
+//           onKeyDown={handleKeyDown}
+//         />
+//         {inputValue && (
+//           <CircleCross className="cross-icon" onClick={handleClear} />
+//         )}
+//       </div>
+//     );
+//   }
+// );
+
+// SearchInput.displayName = 'SearchInput';

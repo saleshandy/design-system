@@ -12,7 +12,14 @@
         background-color: #FFFFFF; 
       }
       
-      &--bg-gray {
+      &--bg-gray .input{
+        background-color: #F9FAFB; 
+        &:focus-within{
+            background-color: #FFFFFF;
+        }
+      }
+
+      &--bg-gray{
         background-color: #F9FAFB; 
         &:focus-within{
             background-color: #FFFFFF;
@@ -38,13 +45,6 @@
     height: 2rem;
     border: 0px;
     margin-left: 0.75rem;
-    
-    &--bg-gray {
-        background-color: #F9FAFB; 
-        &:focus{
-            background-color: #FFFFFF;
-        }
-      }
 
     &:focus-visible{
         border: 0px;
@@ -52,8 +52,7 @@
     }
     .input:focus{
         outline: none;
-    }
-  
+    }   
     
 }
 
