@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Search, CircleCross } from '@saleshandy/icons';
+import React from 'react';
+import { Search, CircleX } from '@saleshandy/icons';
 import classNames from 'classnames';
 import { SearchInputProps } from './type';
 import { ComponentClassNames } from '../../utils/constants';
@@ -52,7 +52,7 @@ export const SearchInput = React.forwardRef<HTMLDivElement, SearchInputProps>(
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
-        {search && <CircleCross className="cross-icon" onClick={handleClear} />}
+        {search && <CircleX className="cross-icon" onClick={handleClear} />}
       </div>
     );
   }
