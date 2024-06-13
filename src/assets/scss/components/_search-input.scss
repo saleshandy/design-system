@@ -1,28 +1,28 @@
 .shd-search-input {
   border: 0.0625rem solid $gray-300;
-  width: 216px;
+  width: 13.5rem;
   display: flex;
   align-items: center;
-  padding-left: 12px;
-  padding-right: 12px;
-  gap: 8px;
-  border-radius: 4px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.25rem;
+  height: 2rem;
 
   &--bg-light {
-    background-color: #ffffff;
+    background-color: $white;
   }
 
-  &--bg-gray .input {
-    background-color: #f9fafb;
+  &--bg-gray .input input {
+    background-color: $gray-50;
     &:focus-within {
-      background-color: #ffffff;
+      background-color: $white;
     }
   }
 
   &--bg-gray {
-    background-color: #f9fafb;
+    background-color: $gray-50;
     &:focus-within {
-      background-color: #ffffff;
+      background-color: $white;
     }
   }
 
@@ -40,38 +40,40 @@
     outline-color: $blue-700;
     cursor: text;
   }
+
+  .search-icon {
+    color: $gray-400;
+    display: flex;
+  }
+
   .input {
-    width: 11.875rem;
-    height: 2rem;
-    border: 0px;
-    margin-left: 0.75rem;
+    outline: none;
+    padding-left: 0.3125rem;
+    border: none;
+    line-height: 0rem;
 
     &:focus-visible {
-      border: 0px;
+      border: 0rem;
       outline: none;
     }
     .input:focus {
       outline: none;
     }
   }
+  input {
+    border: none;
 
-  .cross-icon {
-    position: absolute;
-    left: 14.375rem;
-    top: 35%;
-    color: $gray-400;
-    cursor: pointer;
-    width: 1rem;
-    height: 1rem;
+    &:focus-visible {
+      border: 0rem;
+      outline: none;
+    }
+    .input:focus {
+      outline: none;
+    }
   }
-
-  svg.search-icon {
-    position: absolute;
-    top: 50%;
-    color: $gray-400;
-    transform: translateY(-50%);
-    left: 1rem;
-    width: 1rem;
-    height: 1rem;
-  }
+}
+.cross-icon {
+  display: flex;
+  color: $gray-400;
+  cursor: pointer;
 }

@@ -44,15 +44,20 @@ export const SearchInput = React.forwardRef<HTMLDivElement, SearchInputProps>(
 
     return (
       <div className={componentClasses} {...rest} ref={ref}>
-        <Search className="search-icon" />
-        <input
-          className="input"
-          placeholder={placeholder}
-          value={search}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        />
-        {search && <CircleX className="cross-icon" onClick={handleClear} />}
+        <div className="search-icon">
+          <Search />
+        </div>
+        <div className="input">
+          <input
+            placeholder={placeholder}
+            value={search}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+          />
+        </div>
+        <div className="cross-icon">
+          {search && <CircleX onClick={handleClear} />}
+        </div>
       </div>
     );
   }
