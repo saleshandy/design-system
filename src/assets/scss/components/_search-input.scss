@@ -48,9 +48,10 @@
 
   .input {
     outline: none;
-    padding-left: 0.3125rem;
     border: none;
     line-height: 0rem;
+    margin-right: 0.25rem;
+    margin-left: 0.5rem;
 
     &:focus-visible {
       border: 0rem;
@@ -62,6 +63,7 @@
   }
   input {
     border: none;
+    width: 100%;
 
     &:focus-visible {
       border: 0rem;
