@@ -14,16 +14,10 @@
 
   &--bg-gray .input input {
     background-color: $gray-50;
-    &:focus-within {
-      background-color: $white;
-    }
   }
 
   &--bg-gray {
     background-color: $gray-50;
-    &:focus-within {
-      background-color: $white;
-    }
   }
 
   &:hover {
