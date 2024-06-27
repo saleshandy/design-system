@@ -1,2 +1,2 @@
-export * from './alert'
-export * from './types'
+export * from './alert';
+export * from './types';

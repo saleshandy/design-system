@@ -11,7 +11,7 @@ const Template: StoryFn<AlertProps> = (args) => <Alert {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
- title:"",
- description: "",
- size : "lg"
+  title: '',
+  description: '',
+  size: 'lg',
 };

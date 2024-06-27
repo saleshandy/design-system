@@ -35,15 +35,15 @@
     .alert-icon {
       color: #047857 !important;
     }
-}
-    &--tricks {
-      border-radius: 4px;
-      border: 1px solid var(--purple-100, #ede9fe);
-      background: var(--purple-50, #f5f3ff);
-      .alert-icon {
-        color: #6d28d9 !important;
-      }
+  }
+  &--tricks {
+    border-radius: 4px;
+    border: 1px solid var(--purple-100, #ede9fe);
+    background: var(--purple-50, #f5f3ff);
+    .alert-icon {
+      color: #6d28d9 !important;
     }
+  }
   .alert-title {
     color: var(--gray-800, #1f2937);
     font-family: Inter;
@@ -65,10 +65,10 @@
     width: 16px;
     height: 16px;
   }
-  &--sm{
+  &--sm {
     width: max-content;
   }
-  &--lg{
+  &--lg {
     width: 890px;
   }
 }

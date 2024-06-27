@@ -1,5 +1,3 @@
-import { Alert } from "../components/alert";
-
 // Define Class Names Prefix
 const classesPrefix = 'shd-';
 
@@ -16,7 +14,7 @@ const ComponentClassNames: Record<string, string> = {
   Carousel: 'carousel',
   Input: 'input',
   SearchInput: 'search-input',
-  Alert : 'alert'
+  Alert: 'alert',
 };
 
 // Embed Prefix With Class Names
