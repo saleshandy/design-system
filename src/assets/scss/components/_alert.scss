@@ -40,16 +40,16 @@
     color: $gray-800;
     font-size: 0.75rem;
     font-style: normal;
-    font-weight: 600;
-    line-height: 1rem; /* 133.333% */
+    font-weight: $font-weight-semibold;
+    line-height: 1rem;
     letter-spacing: 0.008rem;
   }
   &--description {
     color: $gray-800;
     font-size: 0.75rem;
     font-style: normal;
-    font-weight: 400;
-    line-height: 1rem; /* 133.333% */
+    font-weight: $font-weight-normal;
+    line-height: 1rem;
   }
   &--icon {
     width: 1rem;
