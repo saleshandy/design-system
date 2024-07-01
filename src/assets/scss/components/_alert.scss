@@ -1,5 +1,5 @@
 .shd-alert {
-  border : 0.063rem solid;
+  border: 0.063rem solid;
   border-radius: 0.25rem;
   &--info {
     border-color: $blue-100;
@@ -9,7 +9,7 @@
     }
   }
   &--alert {
-    border-color:  $yellow-100;
+    border-color: $yellow-100;
     background: $yellow-50;
     &--icon {
       color: $yellow-700;
@@ -23,14 +23,14 @@
     }
   }
   &--success {
-    border-color:  $green-100;
+    border-color: $green-100;
     background: $green-50;
     &--icon {
       color: $green-700;
     }
   }
   &--tricks {
-    border-color:  $purple-100;
+    border-color: $purple-100;
     background: $purple-50;
     &--icon {
       color: $purple-700;
