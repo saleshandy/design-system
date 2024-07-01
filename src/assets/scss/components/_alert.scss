@@ -1,0 +1,75 @@
+.shd-alert {
+  border: 0.063rem solid;
+  border-radius: 0.25rem;
+  &--info {
+    border-color: $blue-100;
+    background: $blue-50;
+    &--icon {
+      color: $blue-700;
+    }
+  }
+  &--alert {
+    border-color: $yellow-100;
+    background: $yellow-50;
+    &--icon {
+      color: $yellow-700;
+    }
+  }
+  &--warning {
+    border-color: $red-100;
+    background: $red-50;
+    &--icon {
+      color: $red-700;
+    }
+  }
+  &--success {
+    border-color: $green-100;
+    background: $green-50;
+    &--icon {
+      color: $green-700;
+    }
+  }
+  &--tricks {
+    border-color: $purple-100;
+    background: $purple-50;
+    &--icon {
+      color: $purple-700;
+    }
+  }
+  &--header {
+    color: $gray-800;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: $font-weight-semibold;
+    line-height: 1rem;
+    letter-spacing: 0.008rem;
+  }
+  &--description {
+    color: $gray-800;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    line-height: 1rem;
+  }
+  &--icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &--lg {
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    align-items: flex-start;
+    gap: 0.5rem;
+    word-break: break-all;
+    width: fit-content;
+  }
+  &--sm {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    align-items: flex-start;
+    gap: 0.25rem;
+    word-break: break-all;
+    width: fit-content;
+  }
+}
