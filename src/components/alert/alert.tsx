@@ -8,11 +8,11 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   (
     {
       className = '',
-      variant = '',
-      Title = '',
+      variant = 'info',
+      header = '',
       description = '',
       size = 'lg',
-      icon = '',
+      icon: Icon,
     },
     ref
   ) => {
@@ -25,10 +25,20 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
 
     return (
       <div ref={ref} className={componentClasses}>
-        {icon && <div className="alert-icon">{icon}</div>}
-        <div className="alert-text">
-          {Title && <div className="alert-title">{Title}</div>}
-          <div className="alert-description">{description}</div>
+        {Icon && (
+          <div className={`${ComponentClassNames.Alert}--icon`}>
+            <Icon />
+          </div>
+        )}
+        <div className={`${ComponentClassNames.Alert}--text`}>
+          {header && (
+            <div className={`${ComponentClassNames.Alert}--header`}>
+              {header}
+            </div>
+          )}
+          <div className={`${ComponentClassNames.Alert}--description`}>
+            {description}
+          </div>
         </div>
       </div>
     );

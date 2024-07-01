@@ -77,3 +77,11 @@
     margin-bottom: 2rem;
   }
 }
+
+.alert-story {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
