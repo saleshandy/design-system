@@ -13,7 +13,6 @@ Template.args = {
   header: '',
   variant: 'info',
   description: '',
-  header: '',
   size: 'lg',
 };
 
