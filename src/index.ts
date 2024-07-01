@@ -16,3 +16,4 @@ export * from './components/carousel';
 export * from './components/tag';
 export * from './components/input';
 export * from './components/search-input';
+export * from './components/alert';
