@@ -1,39 +1,36 @@
 .shd-alert {
+  border : 0.063rem solid;
+  border-radius: 0.25rem;
   &--info {
-    border-radius: 0.25rem;
-    border: 0.063rem solid $blue-100;
+    border-color: $blue-100;
     background: $blue-50;
     &--icon {
       color: $blue-700;
     }
   }
   &--alert {
-    border-radius: 0.25rem;
-    border: 0.063rem solid $yellow-100;
+    border-color:  $yellow-100;
     background: $yellow-50;
     &--icon {
       color: $yellow-700;
     }
   }
   &--warning {
-    border-radius: 0.25rem;
-    border: 0.063rem solid $red-100;
+    border-color: $red-100;
     background: $red-50;
     &--icon {
       color: $red-700;
     }
   }
   &--success {
-    border-radius: 0.25rem;
-    border: 0.063rem solid $green-100;
+    border-color:  $green-100;
     background: $green-50;
     &--icon {
       color: $green-700;
     }
   }
   &--tricks {
-    border-radius: 0.25rem;
-    border: 0.063rem solid $purple-100;
+    border-color:  $purple-100;
     background: $purple-50;
     &--icon {
       color: $purple-700;
@@ -48,7 +45,7 @@
     letter-spacing: 0.008rem;
   }
   &--description {
-    color: var(--gray-800, #1f2937);
+    color: $gray-800;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
