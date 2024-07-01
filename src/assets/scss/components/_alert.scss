@@ -59,20 +59,20 @@
     height: 1rem;
   }
 
-&--lg {
-  display: flex;
-  padding: 0.5rem 0.75rem;
-  align-items: flex-start;
-  gap: 0.5rem;
-  word-break: break-all;
-  width:fit-content;
-}
-&--sm {
-  display: flex;
-  padding: 0.25rem 0.5rem;
-  align-items: flex-start;
-  gap: 0.25rem;
-  word-break: break-all;
-  width:fit-content;
-}
+  &--lg {
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    align-items: flex-start;
+    gap: 0.5rem;
+    word-break: break-all;
+    width: fit-content;
+  }
+  &--sm {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    align-items: flex-start;
+    gap: 0.25rem;
+    word-break: break-all;
+    width: fit-content;
+  }
 }
