@@ -4,35 +4,35 @@
   &--info {
     border-color: $blue-100;
     background: $blue-50;
-    &--icon {
+    .shd-alert--icon {
       color: $blue-700;
     }
   }
   &--alert {
     border-color: $yellow-100;
     background: $yellow-50;
-    &--icon {
+    .shd-alert--icon {
       color: $yellow-700;
     }
   }
   &--warning {
     border-color: $red-100;
     background: $red-50;
-    &--icon {
+    .shd-alert--icon {
       color: $red-700;
     }
   }
   &--success {
     border-color: $green-100;
     background: $green-50;
-    &--icon {
+    .shd-alert--icon {
       color: $green-700;
     }
   }
   &--tricks {
     border-color: $purple-100;
     background: $purple-50;
-    &--icon {
+    .shd-alert--icon {
       color: $purple-700;
     }
   }
