@@ -1,8 +1,8 @@
 import { CSSProperties } from 'react';
 
 export interface SkeletonLoadingProps {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   baseColor?: string;
   highlightColor?: string;
   className?: string;
